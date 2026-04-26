@@ -1,8 +1,10 @@
 ---
+import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import SobreMi from '../components/SobreMi.astro';
 import Proyectos from '../components/Proyectos.astro';
 import Trayectoria from '../components/Trayectoria.astro';
+import Contacto from '../components/Contacto.astro';
 import '../styles/global.css';
 ---
 <html lang="es" class="scroll-smooth">
@@ -10,16 +12,16 @@ import '../styles/global.css';
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Patricia Mago | Portafolio</title>
+        <title>Patricia Mago | Comunicadora & Frontend Developer</title>
     </head>
-    {/* Cambié bg-slate-50 por bg-[#0a1120] para que coincida con tus componentes oscuros */}
     <body class="antialiased text-slate-100 bg-[#0a1120] font-sans">
+        <Navbar />
         <main>
             <Hero />
             <SobreMi />
             <Proyectos />
             <Trayectoria />
+            <Contacto />
         </main>
     </body>
 </html>
