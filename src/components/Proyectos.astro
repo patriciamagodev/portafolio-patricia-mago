@@ -1,0 +1,48 @@
+---
+const proyectos = [
+  { 
+    title: "LANDING PAGE", 
+    desc: "Landing page para evento deportivo con banners, sliders, video y CTA.", 
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    links: { demo: "#", code: "#" }
+  },
+  { 
+    title: "WEBSITE BLOG", 
+    desc: "Blog con secciones como: sobre mí, noticias, posts y CTA.", 
+    tags: ["HTML", "CSS", "Responsive"],
+    links: { demo: "#", code: "#" }
+  },
+  { 
+    title: "E-BOOK", 
+    desc: 'E-book "Cosas que debemos saber sobre HTML" con ejemplos prácticos.', 
+    tags: ["Canva", "MDN Web Docs"],
+    links: { download: "#" }
+  }
+];
+---
+<section id="proyectos" class="py-20 px-6 bg-[#0f172a]">
+  <h2 class="text-3xl font-bold text-center mb-12 text-white uppercase tracking-widest">Proyectos Destacados</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {proyectos.map(p => (
+      <div class="bg-[#1e293b] border border-slate-700 rounded-lg overflow-hidden flex flex-col p-6 hover:border-cyan-400 transition-all group">
+        <h3 class="font-bold text-xl mb-4 text-slate-100">{p.title}</h3>
+        <p class="text-slate-400 mb-6 text-sm flex-grow leading-relaxed">{p.desc}</p>
+        
+        <div class="flex flex-wrap gap-2 mb-8">
+          {p.tags.map(tag => (
+            <span class="text-xs font-mono text-slate-300 border border-slate-600 px-2 py-1 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div class="flex gap-6 mt-auto">
+          {p.links.demo && <a href={p.links.demo} class="text-cyan-400 font-bold text-sm hover:text-white transition uppercase">Ver Demo</a>}
+          {p.links.code && <a href={p.links.code} class="text-cyan-400 font-bold text-sm hover:text-white transition uppercase">Código</a>}
+          {p.links.download && <a href={p.links.download} class="text-cyan-400 font-bold text-sm hover:text-white transition uppercase">Descargar</a>}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
