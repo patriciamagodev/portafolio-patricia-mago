@@ -2,10 +2,11 @@
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import SobreMi from '../components/SobreMi.astro';
-import Proyectos from '../components/Proyectos.astro';
+import Proyectos from '../components/CasosEstudio.astro';
 import Trayectoria from '../components/Trayectoria.astro';
 import Contacto from '../components/Contacto.astro';
 import '../styles/global.css';
+import CasosEstudio from '../components/CasosEstudio.astro';
 ---
 <html lang="es" class="scroll-smooth">
     <head>
@@ -14,12 +15,13 @@ import '../styles/global.css';
         <meta name="viewport" content="width=device-width" />
         <title>Patricia Mago | Comunicadora & Frontend Developer</title>
     </head>
-    <body class="antialiased text-slate-100 bg-[#0a1120] font-sans">
+    {/* Fondo actualizado a un tono más oscuro y profundo */}
+    <body class="antialiased text-slate-100 bg-[#020617] font-sans">
         <Navbar />
         <main>
             <Hero />
             <SobreMi />
-            <Proyectos />
+            <CasosEstudio />
             <Trayectoria />
             <Contacto />
         </main>

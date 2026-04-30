@@ -1,0 +1,61 @@
+---
+const casos = [
+  { 
+    title: "Plataforma de Gestión Deportiva", // Tu proyecto estrella aquí
+    role: "Frontend Developer & UI/UX",
+    context: "Desarrollo de una webapp (PedalGo-Hub) para digitalizar y administrar el registro y las fichas técnicas de ciclistas en eventos competitivos.", 
+    solution: "Se construyó una interfaz limpia con Tailwind CSS que permite a los organizadores filtrar datos rápidamente y a los usuarios inscribirse sin fricción técnica.",
+    tags: ["Astro", "Tailwind CSS", "JavaScript", "Supabase"],
+    link: "#"
+  },
+  { 
+    title: "Estrategia Digital & Landing Page", 
+    role: "Diseño, Código y Copywriting",
+    context: "Lanzamiento de un evento deportivo con la necesidad de captar registros rápidos y explicar la ruta de la carrera.", 
+    solution: "Se maquetó una landing page optimizada para móviles con CTAs claros y banners dinámicos, apoyada por una campaña de comunicación visual (E-book y Reels).",
+    tags: ["HTML/CSS", "Diseño Responsivo", "Marketing Digital"],
+    link: "#"
+  }
+];
+---
+<section id="casos-de-estudio" class="py-24 px-6 bg-[#020617]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+      Casos de <span class="text-sky-500">Estudio</span>
+    </h2>
+    
+    <div class="space-y-12">
+      {casos.map(caso => (
+        <article class="bg-[#0f172a] border border-slate-800 rounded-2xl p-8 hover:border-sky-900 transition-colors">
+          <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-2">{caso.title}</h3>
+              <span class="text-sky-400 font-mono text-sm">{caso.role}</span>
+            </div>
+            <a href={caso.link} class="text-sm font-bold text-white bg-slate-800 hover:bg-sky-500 px-4 py-2 rounded-lg transition">Ver Proyecto →</a>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="text-slate-200 font-bold mb-2">El Problema</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">{caso.context}</p>
+            </div>
+            <div>
+              <h4 class="text-slate-200 font-bold mb-2">La Solución</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">{caso.solution}</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-6 border-t border-slate-800">
+            <span class="text-xs text-slate-500 uppercase tracking-wider font-bold mr-2 mt-1">Stack:</span>
+            {caso.tags.map(tag => (
+              <span class="text-xs font-mono text-sky-300 bg-sky-950/50 px-3 py-1 rounded-full border border-sky-900/50">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
