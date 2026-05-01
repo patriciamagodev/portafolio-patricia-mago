@@ -1,41 +1,54 @@
 ---
-// Aquí podrías importar tu foto si la tienes en /public/
-// import fotoPatricia from '../assets/patricia-mago.jpg';
 ---
-<section id="sobre-mi" class="py-24 px-6 bg-[#0f172a] text-white">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<section id="sobre-mi" class="py-32 px-6 bg-[#020617] text-white">
+  {/* Aumentamos el gap y cambiamos a lg:grid-cols-2 para mejor proporción en pantallas grandes */}
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
     
-    <div class="flex justify-center md:justify-end">
-      <div class="relative group">
-        <div class="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-400 rounded-lg blur opacity-25"></div>
-        <div class="relative bg-slate-800 p-2 rounded-lg aspect-square w-64 h-64 md:w-80 md:h-80 flex items-center justify-center border border-slate-700 overflow-hidden">
-          <span class="text-slate-500 font-mono text-sm">[ Tu Foto Aquí ]</span>
-        </div>
+    {/* Lado de la Foto: Simplificado y con un tamaño más integrado al diseño */}
+    <div class="relative w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
+      <div class="absolute -inset-4 bg-sky-600/10 blur-2xl rounded-full"></div>
+      <div class="relative bg-slate-900/50 aspect-square rounded-2xl flex items-center justify-center border border-slate-800 shadow-2xl overflow-hidden">
+        <span class="text-slate-600 font-mono text-sm">[ Tu Foto Aquí ]</span>
       </div>
     </div>
 
-    <div class="flex flex-col space-y-6">
-      <div>
-        <h2 class="text-4xl font-bold tracking-tight flex items-center gap-3">
-          <svg class="w-8 h-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Sobre <span class="text-sky-400">Mí</span>
-        </h2>
-        <div class="h-1 w-20 bg-cyan-400 mt-2 rounded"></div>
-      </div>
+    {/* Lado del Texto: Estética limpia y minimalista */}
+    <div class="flex flex-col space-y-8">
       
-      <p class="text-slate-200 text-lg leading-relaxed">
-        ¡Hola! Bienvenido, mi nombre es <strong>Patricia Mago</strong>. Soy licenciada en Comunicación Social y Desarrolladora Web Frontend.
-      </p>
-
-      <p class="text-slate-400 leading-relaxed text-base">
-        Mi experiencia como Comunicadora me enseñó a entender a la audiencia, crear mensajes que conectan y construir estrategias con propósito. Hoy aplico ese enfoque para transformar ideas en experiencias digitales intuitivas y eficientes con código.
-      </p>
-
-      <div class="border-l-4 border-cyan-400 pl-4">
-        <p class="italic text-slate-200 text-xl font-medium">
-          "Mi objetivo no solo es construir sitios web, sino crear puentes entre las Marcas y sus Usuarios."
+      {/* Título limpio, sin la línea gruesa debajo */}
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight flex items-center gap-3">
+        <svg class="w-8 h-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Sobre <span class="text-sky-500">Mí</span>
+      </h2>
+      
+      {/* Textos unificados con un color sutil (slate-300) y fuente ligera */}
+      <div class="space-y-5 text-slate-300 text-lg leading-relaxed">
+        <p>
+          ¡Hola! Soy <strong class="font-semibold text-white">Patricia Mago</strong>, licenciada en Comunicación Social y Desarrolladora Web Frontend.
+        </p>
+        <p>
+          Mi experiencia corporativa me enseñó a entender a la audiencia y crear mensajes que conectan. Hoy aplico ese enfoque para transformar ideas en experiencias digitales eficientes a través del código. <strong class="font-semibold text-white">Mi objetivo no solo es construir sitios web, sino crear puentes entre las marcas y sus usuarios.</strong>
         </p>
       </div>
+
+      {/* Stack Tecnológico: Intacto, solo con un padding interno (px-4 py-2) sutilmente mayor */}
+      <div class="pt-6">
+        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-5">Stack Tecnológico</h3>
+        <div class="flex flex-wrap gap-3">
+          {/* Desarrollo */}
+          <span class="px-4 py-2 bg-slate-900 text-sky-400 text-xs font-mono rounded-lg border border-slate-800">Astro</span>
+          <span class="px-4 py-2 bg-slate-900 text-sky-400 text-xs font-mono rounded-lg border border-slate-800">Tailwind CSS</span>
+          <span class="px-4 py-2 bg-slate-900 text-sky-400 text-xs font-mono rounded-lg border border-slate-800">JavaScript</span>
+          {/* Infraestructura y Datos */}
+          <span class="px-4 py-2 bg-slate-900 text-purple-400 text-xs font-mono rounded-lg border border-slate-800">Supabase</span>
+          <span class="px-4 py-2 bg-slate-900 text-purple-400 text-xs font-mono rounded-lg border border-slate-800">Git/GitHub</span>
+          <span class="px-4 py-2 bg-slate-900 text-purple-400 text-xs font-mono rounded-lg border border-slate-800">VPS Hosting</span>
+          {/* Herramientas */}
+          <span class="px-4 py-2 bg-slate-900 text-emerald-400 text-xs font-mono rounded-lg border border-slate-800">n8n</span>
+          <span class="px-4 py-2 bg-slate-900 text-emerald-400 text-xs font-mono rounded-lg border border-slate-800">WordPress</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

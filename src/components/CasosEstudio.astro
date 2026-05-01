@@ -1,19 +1,27 @@
 ---
 const casos = [
   { 
-    title: "Plataforma de Gestión Deportiva", // Tu proyecto estrella aquí
-    role: "Frontend Developer & UI/UX",
-    context: "Desarrollo de una webapp (PedalGo-Hub) para digitalizar y administrar el registro y las fichas técnicas de ciclistas en eventos competitivos.", 
-    solution: "Se construyó una interfaz limpia con Tailwind CSS que permite a los organizadores filtrar datos rápidamente y a los usuarios inscribirse sin fricción técnica.",
-    tags: ["Astro", "Tailwind CSS", "JavaScript", "Supabase"],
+    title: "The Elemental Race - Landing Page", 
+    role: "Frontend Developer",
+    context: "Lanzamiento de un evento deportivo de MTB XCO para Movil Cycle que requería un diseño adaptativo y una vía rápida de inscripción directa.", 
+    solution: "Desarrollo desde cero con enfoque Mobile First usando CSS Grid y Flexbox. Se implementó navegación dinámica con JS y enlaces de inscripción conectados a la API de WhatsApp.",
+    tags: ["HTML5", "CSS3", "JavaScript", "WhatsApp API"],
+    link: "#" // Aquí pondrás el link real cuando lo subas
+  },
+  { 
+    title: "Distrilab Ortiz - E-commerce Corporativo", 
+    role: "Desarrolladora Web End-to-End",
+    context: "Necesidad de una tienda online corporativa funcional y un sistema de cotizaciones directas para clientes.", 
+    solution: "Gestión completa de infraestructura (hosting/dominio) y desarrollo en WordPress con WooCommerce. Se integró un sistema de cotizaciones por WhatsApp y se definieron roles de seguridad.",
+    tags: ["WordPress", "WooCommerce", "Hosting"],
     link: "#"
   },
   { 
-    title: "Estrategia Digital & Landing Page", 
-    role: "Diseño, Código y Copywriting",
-    context: "Lanzamiento de un evento deportivo con la necesidad de captar registros rápidos y explicar la ruta de la carrera.", 
-    solution: "Se maquetó una landing page optimizada para móviles con CTAs claros y banners dinámicos, apoyada por una campaña de comunicación visual (E-book y Reels).",
-    tags: ["HTML/CSS", "Diseño Responsivo", "Marketing Digital"],
+    title: "Gran Fondo Beyond - Gestión y Automatización", 
+    role: "Gestión Web & Operaciones",
+    context: "Control exhaustivo de inscripciones y atención al público masivo para el evento deportivo.", 
+    solution: "Implementación de flujos de mensajería automatizada y manejo de bases de datos para evaluación estadística, reduciendo las incidencias y confirmando pagos eficientemente.",
+    tags: ["n8n", "Bases de Datos", "Automatización"],
     link: "#"
   }
 ];
@@ -21,6 +29,7 @@ const casos = [
 <section id="casos-de-estudio" class="py-24 px-6 bg-[#020617]">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+      <svg class="w-8 h-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
       Casos de <span class="text-sky-500">Estudio</span>
     </h2>
     
@@ -32,12 +41,13 @@ const casos = [
               <h3 class="text-2xl font-bold text-white mb-2">{caso.title}</h3>
               <span class="text-sky-400 font-mono text-sm">{caso.role}</span>
             </div>
-            <a href={caso.link} class="text-sm font-bold text-white bg-slate-800 hover:bg-sky-500 px-4 py-2 rounded-lg transition">Ver Proyecto →</a>
+            {/* Solo mostramos el botón si hay un link válido, por ahora dejará el # */}
+            <a href={caso.link} class="text-sm font-bold text-white bg-slate-800 hover:bg-sky-500 px-4 py-2 rounded-lg transition border border-slate-700 hover:border-sky-400">Ver Proyecto →</a>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
             <div>
-              <h4 class="text-slate-200 font-bold mb-2">El Problema</h4>
+              <h4 class="text-slate-200 font-bold mb-2">El Problema / Contexto</h4>
               <p class="text-slate-400 text-sm leading-relaxed">{caso.context}</p>
             </div>
             <div>
@@ -46,10 +56,10 @@ const casos = [
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 pt-6 border-t border-slate-800">
+          <div class="flex flex-wrap gap-2 pt-6 border-t border-slate-800/60 mt-auto">
             <span class="text-xs text-slate-500 uppercase tracking-wider font-bold mr-2 mt-1">Stack:</span>
             {caso.tags.map(tag => (
-              <span class="text-xs font-mono text-sky-300 bg-sky-950/50 px-3 py-1 rounded-full border border-sky-900/50">
+              <span class="text-xs font-mono text-sky-300 bg-sky-950/30 px-3 py-1 rounded-md border border-sky-900/50">
                 {tag}
               </span>
             ))}
