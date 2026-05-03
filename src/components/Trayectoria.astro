@@ -2,46 +2,77 @@
 const experiencias = [
   { 
     fecha: "Feb 2026 - Abr 2026", 
-    titulo: "Área de Eventos & Automatización | Movil Cycle", 
-    desc: "Control de inscripciones vía web, automatización de mensajería, manejo de bases de datos estadísticas y logística integral de eventos deportivos[cite: 14]." 
+    rol: "Gestión Web y Operaciones de Datos",
+    empresa: "Movil Cycle (Gran Fondo Beyond)", 
+    desc: "Gestión operativa del CMS, monitoreo de flujos automatizados (API) y estructuración de bases de datos para la logística masiva del evento.",
+    tags: ["WordPress", "n8n", "Data Ops"]
   },
   { 
     fecha: "May 2024 - Jun 2024", 
-    titulo: "Área Web | Distrilab Ortiz", 
-    desc: "Desarrollo de e-commerce corporativo, configuración de servidores VPS, integración de sistemas de cotización y capacitación de usuarios[cite: 14]." 
+    rol: "Desarrolladora Web End-to-End",
+    empresa: "Distrilab Ortiz", 
+    desc: "Desarrollo de e-commerce corporativo, configuración de servidores VPS e integración de sistema de cotizaciones conectado a WhatsApp.",
+    tags: ["WooCommerce", "VPS", "WhatsApp API"]
   },
   { 
     fecha: "Feb 2024 - Mar 2025", 
-    titulo: "Diseñadora Web | Laboratorio J&M", 
-    desc: "Creación de infraestructura web inicial, diseño de interfaces enfocadas en UX y conexión de plataformas con canales de atención directa[cite: 14]." 
+    rol: "Diseñadora Web & UI",
+    empresa: "Laboratorio J&M", 
+    desc: "Creación de infraestructura web inicial, diseño de interfaces enfocadas en experiencia de usuario (UX) y conexión de plataformas de atención directa.",
+    tags: ["Frontend", "UI/UX", "CMS"]
+  },
+  { 
+    fecha: "Abr 2016 - Ene 2024", 
+    rol: "Creadora de Contenido Gráfico y Audiovisual",
+    empresa: "Freelance", 
+    desc: "Producción de piezas gráficas y edición de video para plataformas digitales de diversos emprendedores y empresas. Esta experiencia desarrolló mi agudeza visual para el diseño UI y la adaptación técnica de identidades de marca.",
+    tags: ["Diseño Visual", "Edición de Video", "Identidad de Marca"]
   },
   { 
     fecha: "Oct 2005 - Mar 2016", 
-    titulo: "Licenciada en Comunicación Social | USM", 
-    desc: "Formación en estrategia corporativa, gestión de crisis, identidad institucional y creación de campañas de alto impacto[cite: 14]." 
-  },
+    rol: "Licenciada en Comunicación Social",
+    empresa: "Universidad Santa María (USM)", 
+    desc: "Especialización corporativa. Formación en estrategia, gestión de crisis, identidad institucional y creación de campañas de alto impacto.",
+    tags: ["Estrategia Corporativa", "Comunicación"]
+  }
 ];
 ---
-<section id="trayectoria" class="py-24 px-6 bg-[#0a1120] text-white">
+{/* Nota: Corregí el color de fondo a bg-[#020617] para unificarlo con el resto de la web */}
+<section id="trayectoria" class="py-24 px-6 bg-[#020617] text-white">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-4xl font-bold tracking-tight text-center mb-16 flex items-center justify-center gap-3">
       <svg class="w-9 h-9 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
       Mi <span class="text-purple-600">Trayectoria</span>
     </h2>
 
-    <div class="space-y-12 relative before:absolute before:inset-y-0 before:left-4 before:w-0.5 before:bg-slate-700 md:before:left-1/2 md:before:-ml-px">
+    <div class="space-y-12 relative before:absolute before:inset-y-0 before:left-4 before:w-0.5 before:bg-slate-800 md:before:left-1/2 md:before:-ml-px">
       {experiencias.map((exp, index) => (
-        <div class={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+        <div class={`relative flex flex-col md:flex-row items-start md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
           
           {/* Círculo de la línea de tiempo */}
-          <div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-[#0a1120] z-10 md:left-1/2 md:-ml-2"></div>
+          <div class="absolute left-4 md:top-1/2 md:-translate-y-1/2 top-8 w-4 h-4 bg-yellow-500 rounded-full border-4 border-[#020617] z-10 md:left-1/2 md:-ml-2 shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
           
           {/* Tarjeta de contenido */}
           <div class={`w-full pl-12 md:w-1/2 md:pl-0 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 shadow-xl group hover:border-purple-400 transition">
-              <span class="text-sm font-mono text-purple-400">{exp.fecha}</span>
-              <h3 class="text-xl font-bold text-slate-100 mt-1 mb-2">{exp.titulo}</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">{exp.desc}</p>
+            <div class="bg-slate-900/50 p-7 rounded-2xl border border-slate-800 shadow-xl group hover:border-purple-500 transition-colors duration-300">
+              
+              <div class="flex flex-col mb-3">
+                <span class="text-xs font-mono text-yellow-500 mb-2">{exp.fecha}</span>
+                <h3 class="text-xl font-bold text-white leading-tight">{exp.rol}</h3>
+                <span class="text-sm font-medium text-purple-400 mt-1">{exp.empresa}</span>
+              </div>
+              
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">{exp.desc}</p>
+              
+              {/* Micro-Tags de habilidades */}
+              <div class="flex flex-wrap gap-2">
+                {exp.tags.map(tag => (
+                  <span class="text-[10px] font-mono text-slate-300 bg-slate-800 px-2 py-1 rounded border border-slate-700">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
             </div>
           </div>
         </div>
