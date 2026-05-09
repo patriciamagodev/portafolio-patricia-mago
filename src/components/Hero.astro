@@ -3,19 +3,27 @@
 {/* 1. min-h-screen asegura que ocupe toda la pantalla. flex y justify-center centran todo. pt-20 separa del navbar */}
 <section class="relative min-h-screen flex flex-col justify-center px-6 text-center overflow-hidden pt-20">
   
-  {/* Ajusté el resplandor para que se centre verticalmente con el contenido */}
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-100 bg-purple-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+ {/* CAPA DE ONDAS: Adaptable con 3 tamaños distintos (Mobile, Tablet, Desktop) */}
+  <div 
+    class="absolute inset-0 z-0 opacity-60 pointer-events-none bg-[url('/ondasHero.svg')] bg-no-repeat 
+    bg-[length:320%_auto] bg-[position:center_50%] 
+    md:bg-[length:180%_auto] md:bg-[position:center_50%] 
+    lg:bg-[length:100%_auto] lg:bg-[position:center_50%]"
+  ></div>
+
+  {/* Ajusté el resplandor para que se centre verticalmente con el contenido. Le agregué z-0 para que acompañe a las ondas */}
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-100 bg-purple-600/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
   {/* Reduje el ancho máximo del contenedor de 4xl a 3xl para agrupar mejor el texto */}
-  <div class="relative z-10 max-w-3xl mx-auto">
+  <div class="relative z-10 max-w-4xl mx-auto">
     
     {/* 2. Reducción de texto: de 7xl a 5xl/6xl */}
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
       Construyendo interfaces <br class="hidden md:block" /> que <span class="text-purple-600">hablan</span><span class="text-yellow-500">.</span>
     </h1>
     
     {/* Reducción sutil del párrafo para que no pelee con el título */}
-    <p class="text-base md:text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+    <p class="text-base md:text-lg text-slate-200 mb-10 max-w-2xl mx-auto">
       Desarrolladora Frontend & Comunicadora Corporativa. Transformo estrategias complejas en productos digitales rápidos, intuitivos y con propósito.
     </p>
 

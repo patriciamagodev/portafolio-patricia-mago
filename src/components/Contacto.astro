@@ -1,34 +1,53 @@
 ---
 ---
-<section id="contacto" class="py-32 px-6 bg-[#020617] text-center border-t border-slate-800/50">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
-      <span class="text-yellow-500">¡</span>Hagamos equipo<span class="text-yellow-500">!</span>
-    </h2>
-    <p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-      Si buscas una Frontend Developer que no solo ejecute tareas, sino que entienda el ecosistema de tu marca y comunique valor, escríbeme.
-    </p>
+<section id="contacto" class="pt-32 pb-32 px-6 bg-[#020617] border-t border-slate-800/50 overflow-hidden">
+  
+  {/* Contenedor principal con max-w-4xl para alinear con Casos de Estudio */}
+  <div class="max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
     
-    {/* Añadí flex-wrap para que los 3 botones se acomoden perfectamente en cualquier pantalla */}
-    <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
+    {/* LADO IZQUIERDO: Textos y Botones */}
+    <div class="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        <span class="text-yellow-500">¡</span>Hagamos equipo<span class="text-yellow-500">!</span>
+      </h2>
       
-      {/* Botón de WhatsApp: Color amarillo de acento para ser el Call To Action principal */}
-      <a href="https://wa.me/584120880801?text=Hola%20Patricia,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" class="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold transition text-lg flex items-center justify-center gap-3 shadow-lg shadow-yellow-500/20">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        WhatsApp
-      </a>
+      <p class="text-slate-400 text-lg md:text-xl mb-10">
+        Si buscas una Frontend Developer que no solo ejecute tareas, sino que entienda el ecosistema de tu marca y comunique valor, escríbeme.
+      </p>
+      
+      {/* Botones: Forzados en una fila (flex-row), ajustados al tamaño del Hero */}
+      <div class="flex flex-row justify-center md:justify-start gap-2 md:gap-4 w-full">
+        
+        {/* Botón de WhatsApp */}
+        <a href="https://wa.me/584120880801?text=Hola%20Patricia,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-4 md:px-6 py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20 text-sm md:text-base whitespace-nowrap">
+          <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          WhatsApp
+        </a>
 
-      {/* Botón de Email: Con tus datos listos */}
-      <a href="mailto:patriciamagodev@gmail.com" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-400 text-white px-8 py-4 rounded-xl font-bold transition text-lg flex items-center justify-center gap-3 shadow-lg shadow-purple-500/20">
-        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
-        Email
-      </a>
-      
-      {/* Botón de LinkedIn: Solo recuerda ajustar el enlace final si tu URL es diferente */}
-      <a href="https://linkedin.com/in/patriciamago" target="_blank" class="w-full sm:w-auto bg-[#0f172a] hover:bg-slate-800 text-white border border-slate-700 hover:border-slate-500 px-8 py-4 rounded-xl font-bold transition text-lg flex items-center justify-center gap-3">
-        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
+        {/* Botón de Email */}
+        <a href="mailto:patriciamagodev@gmail.com" class="bg-purple-600 hover:bg-purple-400 text-white px-4 md:px-6 py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20 text-sm md:text-base whitespace-nowrap">
+          <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
+          Email
+        </a>
+        
+        {/* Botón de LinkedIn */}
+        <a href="https://linkedin.com/in/patriciamago" target="_blank" class="bg-[#0f172a] hover:bg-slate-800 text-white border border-slate-700 hover:border-slate-500 px-4 md:px-6 py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 text-sm md:text-base whitespace-nowrap">
+          <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
     </div>
+
+    {/* LADO DERECHO: Robot */}
+    <div class="w-full md:w-[45%] flex justify-center md:justify-end mb-8 md:mb-0 relative">
+      <img 
+        src="/robotContacto.svg" 
+        alt="Robot Asistente AI" 
+        class="w-54 h-54 md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] object-contain drop-shadow-[0_15px_35px_rgba(168,85,247,0.4)] hover:-translate-y-4 transition-transform duration-500 z-10"
+      />
+      {/* Resplandor del robot */}
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-72 md:h-72 bg-purple-600/20 blur-[80px] rounded-full pointer-events-none z-0"></div>
+    </div>
+
   </div>
 </section>

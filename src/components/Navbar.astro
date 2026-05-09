@@ -2,36 +2,91 @@
 ---
 <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-[#020617]/80 backdrop-blur-md">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#" class="text-xl font-bold text-white hover:text-purple-400 transition-colors">
+    
+    {/* Logo intacto */}
+    <a href="#" class="text-xl font-bold text-white hover:text-yellow-400 transition-colors">
       Patricia Mago
     </a>
     
+    {/* --- MENÚ DESKTOP (Tus estilos originales exactos) --- */}
     <div class="hidden md:flex gap-6 lg:gap-8 items-center">
       
       {/* Link: Sobre Mí */}
       <a href="#sobre-mi" class="group flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition">
-        <svg class="w-4 h-4 text-slate-500 group-hover:text-purple-400 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <svg class="w-4 h-4 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Sobre Mí
       </a>
 
       {/* Link: Proyectos */}
       <a href="#casos-de-estudio" class="group flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition">
-        <svg class="w-4 h-4 text-slate-500 group-hover:text-purple-400 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <svg class="w-4 h-4 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
         Proyectos
       </a>
 
       {/* Link: Trayectoria */}
       <a href="#trayectoria" class="group flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition">
-        <svg class="w-4 h-4 text-slate-500 group-hover:text-purple-400 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+        <svg class="w-4 h-4 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
         Trayectoria
       </a>
 
       {/* Botón: Contacto */}
-      <a href="#contacto" class="bg-purple-600 hover:bg-purple-400 text-white px-5 py-2 rounded-lg text-sm font-bold transition flex items-center gap-2">
+      <a href="mailto:patriciamagodev@gmail.com" class="bg-purple-600 hover:bg-purple-400 text-white px-5 py-2 rounded-lg text-sm font-bold transition flex items-center gap-2">
         <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         Contacto
       </a>
       
     </div>
+
+    {/* --- BOTÓN HAMBURGUESA (Solo visible en móviles) --- */}
+    <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+      <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  {/* --- MENÚ DESPLEGABLE MOBILE --- */}
+  <div id="mobile-menu" class="hidden flex-col bg-[#020617] border-b border-slate-800 px-6 py-4 gap-2 md:hidden absolute w-full left-0 shadow-2xl top-16">
+    
+    <a href="#sobre-mi" class="mobile-link group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition py-3 border-b border-slate-800/50">
+      <svg class="w-5 h-5 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Sobre Mí
+    </a>
+
+    <a href="#casos-de-estudio" class="mobile-link group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition py-3 border-b border-slate-800/50">
+      <svg class="w-5 h-5 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+      Proyectos
+    </a>
+
+    <a href="#trayectoria" class="mobile-link group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition py-3 border-b border-slate-800/50">
+      <svg class="w-5 h-5 text-slate-500 group-hover:text-yellow-500 transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+      Trayectoria
+    </a>
+
+    <a href="#contacto" class="mobile-link mt-2 bg-purple-600 hover:bg-purple-500 text-white px-5 py-3 rounded-lg text-base font-bold transition flex items-center justify-center gap-2">
+      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Contacto
+    </a>
   </div>
 </nav>
+
+{/* Lógica para abrir/cerrar el menú en móvil */}
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('.mobile-link');
+
+  // Alternar menú al hacer clic en la hamburguesa
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+  });
+
+  // Cerrar menú al hacer clic en cualquier enlace
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      menu.classList.remove('flex');
+    });
+  });
+</script>
